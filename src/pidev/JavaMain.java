@@ -4,13 +4,9 @@
  */
 package pidev;
 
+
 import interfaces.Interface_IService;
 import java.sql.Date;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import models.CodePromo;
 import models.User;
 import services.CodePromoService;
@@ -18,9 +14,9 @@ import services.UserService;
 
 /**
  *
- * @author Firas
+ * @author Ikbel
  */
-public class JavaMain extends Application{
+public class JavaMain {
     
 
     /**
@@ -28,13 +24,12 @@ public class JavaMain extends Application{
      */
     public static void main(String[] args) {
         
-         launch(args);
-         
+        
          Interface_IService ui= new UserService() ;
-         Interface_IService cs= new CodePromoService() ;
+         /*Interface_IService cs= new CodePromoService() ;
          CodePromo c1= new CodePromo(123456, new Date(1920), new Date(2920));
          CodePromo c2= new CodePromo(7777, new Date(1479), new Date(1234));
-         
+         */
          
          // add codepromo
          //cs.ajouter(c1);
@@ -54,36 +49,25 @@ public class JavaMain extends Application{
          
          //cs.supprimer(3);
          
-          User u1 = new User("ikbel", "yassine", new Date(2023 ,02 ,22), "yosri.ikbel@gamil.com", "yosriDOL123", 99229311, "Ariana", "chaffeur",c1);
-          User u2 = new User("ikbel", "Chawki", new Date(1920), "chawki.ikbel@gamil.com", "chawkiDOL123", 24239040, "Ariana", "chaffeur",c1);
-          User u4 = new User("abdeslem", "tounsi", new Date(2022), "slouma@gamil.com", "slouma120", 1231234, "franca", "chiffour",c2);
+         User u1 = new User("baha@gmail.com", "admin","azerty", 1 , "baha", "hzemi", "99229311","img");
+          
           
          //ui.ajouter(u1);
-         //ui.ajouter(u2);
-         //ui.ajouter(u4);
-          //u.setNom("azouz");
+         //ui.supprimer(9); fonctionnelle
+          //u.setName("azouz");
           //System.out.println(u);
           //ui.modifier(u);
-         // System.out.println(ui.afficher());
-         // System.out.println(cs.afficher());
-                  
-          //ui.afficher("1");
-   
+         //System.out.println(ui.afficher());//fonctionnelle
+          //System.out.println(cs.afficher());
+         
           // read by id
           
-          //System.out.println(ui.readById(1));
+         //System.out.println(ui.readById(45)); 
           
           
       }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
- Parent root = FXMLLoader.load(getClass().getResource("../GUI/User.fxml"));
-    Scene scene = new Scene(root);
-    primaryStage.setTitle("BOOK IT");
-    primaryStage.setScene(scene);
-    primaryStage.show();   
-    } 
-    
-
 }
+
+
+
